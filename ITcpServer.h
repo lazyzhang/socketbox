@@ -1,9 +1,6 @@
 #ifndef __ITCPSERVER_H__
 #define __ITCPSERVER_H__
-
-class IDebug;
-class ISocket;
-class IString;
+#include "ISocket.h"
 
 class ITcpServer : public ISocket
 {

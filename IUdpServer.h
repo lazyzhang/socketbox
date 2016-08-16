@@ -1,9 +1,6 @@
 #ifndef __IUDPSERVER_H__
 #define __IUDPSERVER_H__
-
-class IDebug;
-class ISocket;
-class IString;
+#include "ISocket.h"
 
 class IUdpServer : public ISocket
 {

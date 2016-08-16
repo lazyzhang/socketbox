@@ -4,8 +4,12 @@
 class ISocketBuffer
 {
 public:
-	const void * Data(void){}
-	const signed Length(void){}
+	virtual void *GetData(void){IDebug::Assert(__func__);}
+	virtual void  SetLength(int){IDebug::Assert(__func__);}
+	virtual const int   GetLength(void){IDebug::Assert(__func__);}
+	virtual void  SetResult(int){IDebug::Assert(__func__);}
+	virtual const int   GetResult(void){IDebug::Assert(__func__);}
+	virtual const int   GetSize(void){IDebug::Assert(__func__);}
 };
 
 #endif//__ISOCKETBUFFER_H__

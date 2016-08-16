@@ -8,19 +8,29 @@ private:
 	int socketfd;
 
 public:
+	SocketHandler()
+	{
+		socketfd = InvalidSocket();
+	}
+	SocketHandler(const int fd)
+	{
+		socketfd = fd;
+	}
+
+public:
 	void SetHandler(const int fd)
 	{
 		socketfd = fd;
 	}
-	const int GetHandler(void)
+	const int GetHandler(void) const
 	{
 		return socketfd;
 	}
-	bool IsValid(void)
+	const bool IsValid(void) const
 	{
 		return (InvalidSocket() != socketfd);
 	}
-	const int InvalidSocket()
+	const int InvalidSocket(void) const
 	{
 		return -1;
 	}
